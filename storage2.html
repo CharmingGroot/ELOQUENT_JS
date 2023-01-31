@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(localStorage.getItem("name"));
+    console.log(sessionStorage.getItem("name2"));
+    // sotrage는 문자열만 저장할 수 있기 때문에 JSON.parse()해줘야한다.
+    console.log(JSON.parse(localStorage.getItem("arr")));
+    console.log(localStorage.getItem("arr"));
+  </script>
+</body>
+</html>
