@@ -86,9 +86,41 @@ prototype 속성은 Object.prototype에서 파생된 빈 일반객체를 갖습�
 ---
 
 
+## DOM
+
+> 모든 html태그는 객체이다.
+
+객체는 자바스크립트로 접근하고 제어할 수 있다.
+
+```JavaScript
+document.documentElement // html 태그
+document.body // body 태그
+document.head // head 태그
+
+const el = document.getElementById('first'); // Id로 접근 가능하다.
+
+const pList = document.getElementsByTagName('p');
+pList; // p태그를 가진 리스트
+
+document.getElementByClassName('link') // Class 이름으로 접근 가능하다.
+
+document.querySelectorAll('.link'); // Class 이름으로 접근 가능하다.
+document.querySelectorAll('#link'); // Id 이름으로 접근 가능하다.
+
+document.querySelector('#first'); // 제일 처음 노드만 가져옴.
 
 
+```
 
+> node와 element는 구분됩니다.
+
+### Node와 Element 접근 정리
+
+|      | 모든노드                            | 요소노드                                        |
+| ---- | ----------------------------------- | ----------------------------------------------- |
+| 부모 | parentNode                          | parentElement                                   |
+| 자식 | childNodes / firstChild / lastChild | children / firstElementChild / lastElementChild |
+| 형제 | previousSibling / nextSibling       | previousElementSibling / nextElementSibling     |
 
 
 
