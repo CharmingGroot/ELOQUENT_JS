@@ -11,3 +11,6 @@ console.log(ul.lastChild); // 노드
 
 console.log(ul.firstElementChild); // 요소
 console.log(ul.lastElementChild); // 요소 , 얘네를 더 많이 쓴다.
+
+const newLi = document.createElement('li');
+ul.appendChild(newLi);

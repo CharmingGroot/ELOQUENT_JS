@@ -125,6 +125,61 @@ document.querySelector('#first'); // 제일 처음 노드만 가져옴.
 
 
 
+1. document.createElement 로 요소를 만들고
+2. document.createTextNode 로 요소 안에 넣을 텍스트 노드를 만든다.
+3. appendChild를 통해 텍스트 노드를 요소안에 넣어준다.
+4. appendChild를 통해 1-3 과정을 거쳐 만들어진 요소를 원하는 요소 하위에 추가한다.
+ 
+
+
+
+## Event.target
+
+> target 속성은 이벤트가 발생한 대상(객체)를 가리킨다.
+
+다음과같이 해당 이벤트객체의 id를 가져올 수 있다
+
+```javaScript
+...
+  (e)=>{
+    console.log(e.target.id); // 해당 객체의 id를 콘솔에 출력
+  }
+
+```
+
+
+## Map
+
+> 값과 값을 연결하는 자료구조이다. 예를들어 이름과 나이를 매핑할 수 있다.
+
+
+set, get, hash 메서드는 Map 객체의 인터페이스이다.
+
+
+## Symbol
+
+> symbol.js
+
+## 반복자 인터페이스 
+
+> for/of 반복문에 전달된 객체는 반복하여 처리할 수 있어야한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,3 +193,14 @@ document.querySelector('#first'); // 제일 처음 노드만 가져옴.
 ## ::after
 
 - 반드시 공백이 없어야한다. 공백이 있으면 적용이 안된다.
+
+> JS로 CSS스타일 속성을 작성할 때에는 camelCase를 적용한다.
+
+
+> 미리 작성해둔 CSS 스타일속성을 요소아이디.className = '선택자'; 로 원하는 시점에 지정할 수 있다.
+>
+
+## classList
+
+> 앞서 말한 className은 수정할 때 손이 많이가서 잘 안쓴다.
+> classList는 유사배열이다. add나 remove같은 활용도 높은 메서드들도 사용할 수 있다.
