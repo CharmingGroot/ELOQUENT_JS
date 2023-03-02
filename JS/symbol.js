@@ -34,5 +34,21 @@ for (person in people2) {
   console.log(person);
 }
 
-// 위 반복문은 undefined를 리턴합니다.
-// Symbol 은 열거가 불가하기 때문에 반복도 불가합니다.
+// 위 반복문은 undefined를 리턴한다.
+// Symbol 은 열거가 불가하기 때문에 반복도 불가하다.
+
+//  따라서 객체의 속성들의 배열을 얻는 별도의 방법이 존재한다.
+// 
+
+const people3 = {
+  [Symbol("김씨")]: "GF",
+  [Symbol("박씨")]: "GF",
+  [Symbol("김씨")]: "GF"
+};
+
+const symbols = Object.getOwnPropertySymbols(people3);
+console.log(symbols); // 배열로 출력된다.
+//  배열로 변환해주었으니 Map 을 사용하면 된다.
+
+const value = symbols.map(symbol => people3[symbol]);
+console.log(value);
