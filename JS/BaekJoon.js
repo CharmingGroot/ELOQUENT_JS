@@ -54,3 +54,6 @@ function calRes(A, B, C) {
 }
 
 calRes(A, B, C);
+
+// 2588번
+
